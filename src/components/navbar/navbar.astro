@@ -6,26 +6,67 @@ import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 
 const menuitems = [
   {
-    title: "Features",
+    title: "Materials",
     path: "#",
     children: [
-      { title: "Action", path: "#" },
-      { title: "Another action", path: "#" },
-      { title: "Dropdown Submenu", path: "#" },
+      { title: "Silicone", path: "#" },
+      { title: "HNBR", path: "#" },
+      { title: "Chloroprene/Neoprene", path: "#" },
+      { title: "EPDM", path: "#" },
+      { title: "Transit Grade Rubber", path: "#" },
+      { title: "BUNA-N", path: "#" },
+      { title: "Natural Rubber", path: "#" },
+      { title: "Fluoroelastomer", path: "#" },
+      { title: "SBR", path: "#" },
     ],
   },
   {
-    title: "Pricing",
-    path: "/pricing",
+    title: "Rubber Products",
+    path: "#",
+    children: [
+      { title: "Extruded Profiles", path: "#" },
+      { title: "Tubing & Cord", path: "#" },
+      { title: "Gaskets & Seals", path: "#" },
+      { title: "Formed Hose", path: "#" },
+      { title: "Lathe Cut Washers", path: "#" },
+    ],
   },
+  {
+    title: "Capabilities",
+    path: "#",
+    children: [
+      { title: "Curing Methods", path: "#" },
+      { title: "Design Assistance", path: "#" },
+      { title: "Rubber & Silicone Extrusion", path: "#" },
+      { title: "Value-Added Services", path: "#" },
+    ],
+  },
+  {
+    title: "Specifications",
+    path: "#",
+    children: [
+    {title: "ASTM E 162-13", path:"#"},
+    {title: "ASTM C 1166-06", path:"#"},
+    {title: "ASTM E 662-14", path:"#"},
+    {title: "ASTM E 1354-15", path:"#"},
+    {title: "SMP 800-C", path:"#"},
+    {title: "NFPA-130", path:"#"},
+    {title: "BSS 7239", path:"#"},
+    ],
+  },
+  // {
+  //   title: "Blog",
+  //   path: "/blog",
+  // },
+  // {
+  //   title: "Pricing",
+  //   path: "/pricing",
+  // },
   {
     title: "About",
     path: "/about",
   },
-  {
-    title: "Blog",
-    path: "/blog",
-  },
+  
   {
     title: "Contact",
     path: "/contact",
@@ -38,8 +79,9 @@ const menuitems = [
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
         <a href="/" class="text-lg"
-          ><span class="font-bold text-slate-800">Astro</span><span
-            class="text-slate-500">ship</span
+          ><span class="font-bold text-slate-800">Sri Saravana</span><span
+            class="text-slate-500">
+            Rubber and Plastics</span
           >
         </a>
         <div class="block lg:hidden">
@@ -72,17 +114,7 @@ const menuitems = [
             ))
           }
         </ul>
-        <div class="lg:hidden flex items-center mt-3 gap-4">
-          <Link href="#" style="muted" block size="md">Log in</Link>
-          <Link href="#" size="md" block>Sign up</Link>
-        </div>
       </MenuItems>
     </Astronav>
-    <div>
-      <div class="hidden lg:flex items-center gap-4">
-        <a href="#">Log in</a>
-        <Link href="#" size="md">Sign up</Link>
-      </div>
-    </div>
   </header>
 </Container>
