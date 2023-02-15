@@ -21,7 +21,7 @@ const menuitems = [
     ],
   },
   {
-    title: "Rubber Products",
+    title: "Products",
     path: "#",
     children: [
       { title: "Extruded Profiles", path: "#" },
@@ -41,19 +41,19 @@ const menuitems = [
       { title: "Value-Added Services", path: "#" },
     ],
   },
-  {
-    title: "Specifications",
-    path: "#",
-    children: [
-    {title: "ASTM E 162-13", path:"#"},
-    {title: "ASTM C 1166-06", path:"#"},
-    {title: "ASTM E 662-14", path:"#"},
-    {title: "ASTM E 1354-15", path:"#"},
-    {title: "SMP 800-C", path:"#"},
-    {title: "NFPA-130", path:"#"},
-    {title: "BSS 7239", path:"#"},
-    ],
-  },
+  // {
+  //   title: "Specifications",
+  //   path: "#",
+  //   children: [
+  //   {title: "ASTM E 162-13", path:"#"},
+  //   {title: "ASTM C 1166-06", path:"#"},
+  //   {title: "ASTM E 662-14", path:"#"},
+  //   {title: "ASTM E 1354-15", path:"#"},
+  //   {title: "SMP 800-C", path:"#"},
+  //   {title: "NFPA-130", path:"#"},
+  //   {title: "BSS 7239", path:"#"},
+  //   ],
+  // },
   // {
   //   title: "Blog",
   //   path: "/blog",
@@ -114,7 +114,15 @@ const menuitems = [
             ))
           }
         </ul>
+        <div class="lg:hidden flex items-center mt-3 gap-4">
+          <Link href="#" size="md" block>Get a Quote</Link>
+        </div>
       </MenuItems>
     </Astronav>
+    <div>
+      <div class="hidden lg:flex items-center gap-4">
+        <Link href="#" size="md">Get a Quote</Link>
+      </div>
+    </div>
   </header>
 </Container>
