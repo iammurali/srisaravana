@@ -4,47 +4,85 @@ import { Icon } from "astro-icon";
 
 const features = [
   {
-    title: "Rubbers",
+    title: "Products - A",
     description:
       "Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.",
     icon: "bx:bxs-briefcase",
+    children: [
+      "MOULDED EXTRUDED RUBBER PRODUCTS",
+      "RUBBERISING",
+      "POLYURETHISING OF ENGINEERING PRODUCTS.",
+      "RUBBER ROLLERS.",
+      "DIAPHRAGMS & BELLOWS.",
+      "'O' - RINGS & OIL SEALS IN ALL GRADES OF RUBBERS",
+      "SEALS - U.V. TYPE.",
+    ],
   },
   {
-    title: "Capabilities",
+    title: "Products - B",
     description:
       "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
     icon: "bx:bxs-window-alt",
+    children: [
+      "HEAT RESISTANCE TEFLON PRODUCTS",
+      "TEFLON FLAKES, SEALS, 'O'-RINGS, BUSHES",
+      "FOOD GRADE SILICON EXTRUDED PRODUCTS",
+      "INDUSTRIAL PLASTIC COMPONENTS.",
+      "INDUSTRIAL CONVEYOR, TRANSMISSION BELTS, V.BELTS,",
+      "FLEXIBLE LOW | HIGH TEMPERATURE LIGHT WEIGHT HOSES & DUCTS.",
+      "SLICON TUBE",
+      "ALL TYPE OF RUBBER CHORDS.",
+    ],
   },
   {
     title: "Materials",
     description:
       "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page.  ",
     icon: "bx:bxs-data",
+    children: [
+      "Silicone",
+      "HNBR",
+      "Chloroprene/Neoprene",
+      "EPDM",
+      "Transit Grade Rubber",
+      "BUNA-N",
+      "Natural Rubber",
+      "Fluoroelastomer",
+      "SBR",
+    ],
   },
-  {
-    title: "Industries Served",
-    description:
-      "Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any other npm packages.",
-    icon: "bx:bxs-bot",
-  },
-  {
-    title: "Specification",
-    description:
-      "Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication. It just works!",
-    icon: "bx:bxs-file-find",
-  },
-  {
-    title: "Community",
-    description:
-      "Astro is an open source project powered by hundreds of contributors making thousands of individual contributions.",
-    icon: "bx:bxs-user",
-  },
+  // {
+  //   title: "Industries Served",
+  //   description:
+  //     "Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any other npm packages.",
+  //   icon: "bx:bxs-bot",
+  //   children: [
+  //     "Automobiles",
+  //     "Distilleries",
+  //     "Chemicals",
+  //     "Wood Industries",
+  //     "Breweries",
+  //     "Food Industries",
+  //   ],
+  // },
+  // {
+  //   title: "Specification",
+  //   description:
+  //     "Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication. It just works!",
+  //   icon: "bx:bxs-file-find",
+  // },
+  // {
+  //   title: "Community",
+  //   description:
+  //     "Astro is an open source project powered by hundreds of contributors making thousands of individual contributions.",
+  //   icon: "bx:bxs-user",
+  // },
 ];
 ---
 
 <div class="mt-16 md:mt-0">
   <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-    Everything you need in one place 
+    Everything you need in one place
   </h2>
   <p class="text-lg mt-4 text-slate-600">
     Astro comes batteries included. It takes the best parts of state-of-the-art
@@ -61,7 +99,17 @@ const features = [
         </div>
         <div>
           <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
-          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+          {item.children ? (
+            item.children.map((child) => (
+              <div>
+                <li>{child}</li>
+              </div>
+            ))
+          ) : (
+            <p class="text-slate-500 mt-2 leading-relaxed">
+              {item.description}
+            </p>
+          )}
         </div>
       </div>
     ))
